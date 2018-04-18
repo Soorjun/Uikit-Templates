@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Template 5</title>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/components/dotnav.css" />
+    <link rel="stylesheet" href="css/components/slidenav.css" />
+    <link rel="stylesheet" href="css/components/progress.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/components/parallax.js"></script>
+    <script src="js/components/pagination.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+</head>
+
+<body>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Dynamic Grid | Filtering
+            <code>data-uk-grid</code>
+        </h3>
+        <ul>
+            <li>data-uk-grid - Create a multi-column, dynamic grid layout whose items can be sorted and filtered.</li>
+        </ul>
+        <ul id="filter" class="uk-subnav uk-subnav-pill">
+            <li data-uk-filter="">
+                <a href="#"></a>All</li>
+            <li data-uk-filter="filter-a">
+                <a href="#"></a>Filter A</li>
+            <li data-uk-filter="filter-b">
+                <a href="#"></a>Filter B</li>
+        </ul>
+
+        <!-- Dynamic Grid -->
+        <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4" data-uk-grid="{controls: '#filter',gutter: 40}"
+            style="position: relative; margin-left: -20px; height: 394px;">
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-a" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 0px; display: block;"
+                aria-hidden="false">
+                <div class="uk-panel-box">A 1</div>
+            </div>
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-a" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 210.688px; display: block;"
+                aria-hidden="false">
+                <div class="uk-panel-box">A 2</div>
+            </div>
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-a" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 421.375px; display: block;"
+                aria-hidden="false">
+                <div class="uk-panel-box">A 3</div>
+            </div>
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-a" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 632.063px; display: block;"
+                aria-hidden="false">
+                <div class="uk-panel-box">A 4</div>
+            </div>
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-b" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 132px; opacity: 1; left: 0px; display: block;"
+                aria-hidden="false">
+                <div class="uk-panel-box">b 1</div>
+            </div>
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-b" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 152px; opacity: 1; left: 210.688px; display: block;"
+                aria-hidden="false">
+                <div class="uk-panel-box">b 2</div>
+            </div>
+            <div class="uk-grid-width-small-1-2" data-uk-filter="filter-b" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 212px; opacity: 1; left: 421.375px;"
+                aria-hidden="false">
+                <div class="uk-panel-box">b 3</div>
+            </div>
+        </div>
+    </div>
+    <hr class="uk-article-divider">
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Parallax Grid
+            <code>data-uk-grid-parallax</code>
+        </h3>
+        <ul>
+            <li>data-uk-grid-parallax - Create an effect which scrolls the single columns of a grid with different speeds.</li>
+        </ul>
+        <!-- Parallax Grid -->
+        <div class="uk-margin uk-clearfix">
+            <div class="uk-grid uk-grid-match uk-grid-width-1-1 uk-grid-width-medium-1-3 tm-grid-height-250" data-uk-grid="" data-uk-grid-margin=""
+                data-uk-grid-parallax="" style="margin-bottom: 150px;">
+                <div class="uk-row-first" style="transition: transform 150ms linear; transform: translate3d(0px, 1.7341px, 0px);">
+
+                    <div class="uk-panel uk-panel-box">1</div>
+                    <div class="uk-panel uk-panel-box">2</div>
+                    <div class="uk-panel uk-panel-box">3</div>
+
+                </div>
+                <div style="transition: transform 150ms linear; transform: translate3d(0px, 13.8728px, 0px);">
+
+                    <div class="uk-panel uk-panel-box uk-panel-box-primary">4</div>
+                    <div class="uk-panel uk-panel-box uk-panel-box-primary">5</div>
+                    <div class="uk-panel uk-panel-box uk-panel-box-primary">6</div>
+
+                </div>
+                <div style="transition: transform 150ms linear; transform: translate3d(0px, 1.7341px, 0px);">
+
+                    <div class="uk-panel uk-panel-box">7</div>
+                    <div class="uk-panel uk-panel-box">8</div>
+                    <div class="uk-panel uk-panel-box">9</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Dotnav
+            <code>uk-dotnav</code>
+        </h3>
+        <ul>
+            <li>uk-dotnav - Create a dot navigation with a horizontal or vertical layout to navigate through slideshows or to
+                scroll to different page sections.</li>
+        </ul>
+        <ul class="uk-dotnav">
+            <li class="uk-active">
+                <a href="#">Item 1</a>
+            </li>
+            <li>
+                <a href="#">Item 2</a>
+            </li>
+            <li>
+                <a href="#">Item 3</a>
+            </li>
+            <li>
+                <a href="#">Item 4</a>
+            </li>
+            <li>
+                <a href="#">Item 5</a>
+            </li>
+            <li>
+                <a href="#">Item 6</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Slidenav | Position slidenav
+            <code>uk-slidenav | uk-slidenav-position | uk-slidenav-contrast</code>
+        </h3>
+        <ul>
+            <li>uk-slidenav - Defines a navigation with previous and next buttons to browse through slideshows.</li>
+            <li>uk-slidenav-position - To position the Slidenav over any content.</li>
+            <li>uk-slidenav-contrast - For better visibility on images.</li>
+        </ul>
+        <div class="uk-slidenav-position uk-display-inline-block">
+            <img src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="">
+            <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous"></a>
+            <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next"></a>
+        </div>        
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Pagination
+            <code>data-uk-pagination</code>
+        </h3>
+        <ul>
+            <li>data-uk-pagination - Create JavaScript based paginations utilizing the Pagination component..</li>
+        </ul>
+        <ul class="uk-pagination" data-uk-pagination="{items:1000, itemsOnPage:10, currentPage:50}"><li><a href="#page-1" data-page="0">1</a></li><li><span>...</span></li><li><a href="#page-48" data-page="47">48</a></li><li><a href="#page-49" data-page="48">49</a></li><li><a href="#page-50" data-page="49">50</a></li><li class="uk-active"><span>51</span></li><li><a href="#page-52" data-page="51">52</a></li><li><a href="#page-53" data-page="52">53</a></li><li><a href="#page-54" data-page="53">54</a></li><li><span>...</span></li><li><a href="#page-100" data-page="99">100</a></li></ul>     
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Pagination
+            <code>data-uk-pagination</code>
+        </h3>
+        <ul>
+            <li>data-uk-pagination - Create JavaScript based paginations utilizing the Pagination component..</li>
+        </ul>
+        <div class="uk-progress uk-width-medium-1-2 uk-progress-striped uk-active">
+            <div class="uk-progress-bar" style="width: 40%;">40%</div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

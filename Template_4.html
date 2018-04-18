@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Template 4</title>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/uikit.js"></script>
+</head>
+
+<body>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Dropdown
+            <code>uk-dropdown | data-uk-dropdown | data-uk-dropdown="{mode:'click'}"</code>
+        </h3>
+        <ul>
+            <li>uk-dropdown Opens the dropdown on hover and adds a little delay,.</li>
+            <li>data-uk-dropdown Opens the dropdown by clicking the toggle. </li>
+        </ul>
+        <div id="uk-margin">
+            <h1>data-uk-dropdown</h1>
+            <div class="uk-button-dropdown" data-uk-dropdown aria-haspopup="true" aria-expanded="false">
+                <button class="uk-button">Hover Me
+                    <i class="uk-icon-caret-down"></i>
+                </button>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;" tabindex="">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li>
+                            <a href="#">Item</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h1>data-uk-dropdown-mode</h1>
+            <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+                <button class="uk-button">Click
+                    <i class="uk-icon-caret-down"></i>
+                </button>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;" tabindex="">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li>
+                            <a href="#">Item</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h1>Caret dropdown</h1>
+            <div class="uk-button-group">
+                <button class="uk-button">Button</button>
+                <div data-uk-dropdown="{mode:'click',pos:'left-bottom'}" aria-haspopup="true" aria-expanded="false" class="">
+                    <button class="uk-button">
+                        <i class="uk-icon-caret-down"></i>
+                    </button>
+                    <div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" aria-hidden="true" style="top: 30px; left: 0px;" tabindex="">
+                        <ul class="uk-nav uk-nav-dropdown uk-panel">
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Another item</a>
+                            </li>
+                            <li class="uk-nav-header">Header</li>
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Another item</a>
+                            </li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="#">Separated item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h1>Justify dropdown</h1>
+            <div id="justify1">
+                <div class="uk-button-dropdown uk-dropdown-close" data-uk-dropdown="{justify:'#justify1'}" aria-haspopup="true" aria-expanded="false">
+                    <button class="uk-button">Justify
+                        <i class="uk-icon-caret-down"></i>
+                    </button>
+                    <div class="uk-dropdown uk-dropdown-bottom" aria-hidden="true" style="top: 30px; left: 0px; min-width: 823px; margin-left: 0px;"
+                        tabindex="">
+                        <ul class="uk-nav uk-nav-dropdown ">
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Another item</a>
+                            </li>
+                            <li class="uk-nav-header">Header</li>
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Another item</a>
+                            </li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="#">Separated item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h1>Grid</h1>
+                <div class="uk-button-dropdown" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                    <button class="uk-button">2 Columns
+                        <i class="uk-icon-caret-down"></i>
+                    </button>
+                    <div class="uk-dropdown uk-dropdown-width-2 uk-dropdown-bottom" aria-hidden="true" style="top: 30px; left: 0px;" tabindex="">
+
+                        <div class="uk-grid uk-dropdown-grid">
+                            <div class="uk-width-1-2">
+                                <ul class="uk-nav uk-nav-dropdown uk-panel">
+                                    <li>
+                                        <a href="#">Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another item</a>
+                                    </li>
+                                    <li class="uk-nav-header">Header</li>
+                                    <li>
+                                        <a href="#">Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another item</a>
+                                    </li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>
+                                        <a href="#">Separated item</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <ul class="uk-nav uk-nav-dropdown uk-panel">
+                                    <li>
+                                        <a href="#">Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another item</a>
+                                    </li>
+                                    <li class="uk-nav-header">Header</li>
+                                    <li>
+                                        <a href="#">Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another item</a>
+                                    </li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>
+                                        <a href="#">Separated item</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Modal
+            <code>uk-modal | uk-modal-dialog | uk-modal-close</code>
+        </h3>
+        <ul>
+            <li>uk-modal - to create the dialog container and an overlay that blanks out the page.</li>
+            <li>uk-modal-dialog - Add this class to a child "div" element to create the dialog box.</li>
+            <li>uk-modal-close - Add this class to an "a" or "button" element to create a close button within the dialog box..</li>
+        </ul>
+        <button class="uk-button" data-uk-modal="{target:'#modal', bgclose:false, center:true}">Open</button>
+        <div id="modal" class="uk-modal" aria-hidden="true" style="display: none; overflow-y: scroll;">
+            <div class="uk-modal-dialog">
+                <a href="" class="uk-modal-close uk-close"></a>
+                <h1>Headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Off-canvas
+            <code>uk-offcanvas | uk-offcanvas-bar</code>
+        </h3>
+        <ul>
+            <li>uk-offcanvas - Create a smooth off-canvas sidebar that slides in and out of the page.</li>
+            <li>uk-offcanvas-bar - Add this class to a child
+                <div> element to create the off-canvas bar</li>
+        </ul>
+        <button class="uk-button" data-uk-offcanvas="{target:'#offcanvas-1'}">Open</button>
+        <div id="offcanvas-1" class="uk-offcanvas" aria-hidden="true">
+            <div class="uk-offcanvas-bar" mode="push">
+                <div class="uk-panel">Lorem ipsum dolor sit amet,
+                    <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+                <div class="uk-panel">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <div class="uk-container uk-container-center uk-margin-top">
+            <h3>Switcher
+                <code>data-uk-switcher="{connect:'#ID'}"</code>
+            </h3>
+            <ul>
+                <li>data-uk-switcher="{connect:'#ID'}" - Dynamically transition through different content panes.</li>
+            </ul>
+            <ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#subnav-pill-content-1', animation:'fade'}">
+                <li class="uk-active" aria-expanded="true">
+                    <a href="#">Item</a>
+                </li>
+                <li aria-expanded="false" class="">
+                    <a href="#">Item</a>
+                </li>
+                <li aria-expanded="false" class="">
+                    <a href="#">Item</a>
+                </li>
+            </ul>
+            <ul id="subnav-pill-content-1" class="uk-switcher">
+                <li class="uk-active" aria-hidden="false">Hello!</li>
+                <li aria-hidden="true" class="">Hello again!</li>
+                <li aria-hidden="true" class="">Bazinga!</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="uk-container uk-container-center uk-margin-top">
+            <h3>Toggle
+                <code>data-uk-toggle="{target: #ID}"</code>
+            </h3>
+            <ul>
+                <li>data-uk-toggle="{target: #ID}" - Hide, switch or change the appearence of different contents through a toggle.</li>
+            </ul>
+            <button class="uk-button uk-margin-small-bottom" data-uk-toggle="{target:'#toggle1'}">Toggle</button>
+            <div id="toggle1" class="uk-panel uk-panel-box" aria-hidden="false">What's up?</div>
+        </div>
+        <hr>
+        <div class="uk-container uk-container-center uk-margin-top">
+            <h3>Scrollspy
+                <code>data-uk-scrollspy</code>
+            </h3>
+            <ul>
+                <li>data-uk-scrollspy - Trigger events and animations while scrolling your page.</li>
+            </ul>
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-panel uk-panel-box uk-scrollspy-init-inview uk-scrollspy-inview uk-animation-fade" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">
+                        <h3>Fade</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4 uk-push-1-4">
+                    <div class="uk-panel uk-panel-box uk-scrollspy-init-inview uk-scrollspy-inview uk-animation-scale-up" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true}">
+                        <h3>Scale up</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4 uk-push-2-4">
+                    <div class="uk-panel uk-panel-box uk-scrollspy-init-inview uk-scrollspy-inview uk-animation-scale-down" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true}">
+                        <h3>Scale down</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4 uk-push-3-4">
+                    <div class="uk-panel uk-panel-box uk-scrollspy-init-inview" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true}">
+                        <h3>Slide top</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="uk-container uk-container-center uk-margin-top">
+            <h3>Smooth scroll - <code>data-uk-smooth-scroll</code>
+            </h3>
+            <ul>
+                <li>data-uk-smooth-scroll - Enhance your site with a nice effect that slows down the scrolling when jumping to another part of your page.</li>
+            </ul>
+            <a href="#top" class="uk-button" data-uk-smooth-scroll="">Go Up!</a>
+        </div>
+</body>
+
+</html>

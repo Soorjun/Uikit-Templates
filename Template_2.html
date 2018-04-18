@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Template 2</title>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/components/accordion.css">
+    <script type="text/javascript" src="js/components/accordion.min.js"></script>
+    <style>
+        .uk-nav-side ul a {
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Usage of component
+            <code>uk-nav | uk-nav-side | uk-active</code>
+        </h3>
+        <ul>
+            <li>uk-nav to "ul" tag</li>
+            <li>use of "a" tag for menu items</li>
+            <li>add uk-active class to the li for an active state</li>
+            <li>add uk-nav-side to add style</li>
+        </ul>
+        <ul class="uk-nav uk-nav-side">
+            <li class="uk-active">
+                <a href="#">Home</a>
+            </li>
+            <li>Menu 1</li>
+            <ul>
+                <li>Sub menu 1</li>
+                <li>Sub menu 1</li>
+            </ul>
+            <li>Menu 2</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Nested navs
+            <code>uk-nav-sub | uk-parent | uk-nav-parent-icon</code>
+        </h3>
+        <ul>
+            <li>"uk-nav-sub" to optimized spacing</li>
+            <li>"uk-parent" to indicate a parent menu item</li>
+            <li>"uk-nav-parent-icon" indicating parent items</li>
+        </ul>
+        <ul class="uk-nav uk-nav-side uk-nav-parent-icon uk-nav-sub">
+            <li class="uk-active">
+                <a href="#">Home</a>
+            </li>
+            <li class="uk-parent">
+                <a href="#">Parent 1</a>
+            </li>
+            <li class="uk-parent">
+                <a href="#">Parent 2</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Accordion
+            <code>data-uk-nav</code>
+        </h3>
+        <ul>
+            <li>"data-uk-nav" to apply the accordion effect</li>
+        </ul>
+        <ul class="uk-nav uk-nav-side uk-nav-parent-icon uk-nav-sub" data-uk-nav>
+            <li class="uk-active">
+                <a href="#">Home</a>
+            </li>
+            <li class="uk-parent">
+                <a href="#">Parent 1</a>
+                <ul class="uk-nav-sub">
+                    <li>
+                        <a href="#">Child 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Child 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">Parent 2</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Accordion | Header and divider
+            <code>data-uk-nav | uk-nav-header | uk-nav-divider</code>
+        </h3>
+        <ul>
+            <li>"data-uk-nav" to apply the accordion effect</li>
+            <li>"uk-nav-header" to create a header</li>
+            <li>"uk-nav-divider" to create a divider separating menu items</li>
+        </ul>
+        <ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav>
+            <li class="uk-active uk-nav-header">
+                <a href="#">Home +
+                    <code>uk-nav-header</code>
+                </a>
+            </li>
+            <li class="uk-parent">
+                <a href="#">Parent 1</a>
+                <ul class="uk-nav-sub">
+                    <li class="uk-nav-divider">
+                        <a href="#">Child 1 +
+                            <code>uk-nav-divider</code>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Child 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">Parent 2</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Style modifiers - Nav side
+            <code>uk-nav-side</code>
+        </h3>
+        <ul>
+            <li>"uk-nav-side" to place a nav inside your sidebar</li>
+        </ul>
+        <div class="uk-panel uk-panel-box">
+            <h3 class="uk-panel-title">Nav side in panel</h3>
+            <ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav>
+                <li class="uk-nav-header">Header</li>
+                <li class="uk-parent">
+                    <a href="#">
+                        <i class="uk-icon-star"></i> Parent</a>
+                    <ul class="uk-nav-sub">
+                        <li>
+                            </i>
+                            <a href="#">
+                                <i class="uk-icon-facebook"></i> Child 1</a>
+                        </li>
+                        <li>
+                            </i>
+                            <a href="#">
+                                <i class="uk-icon-facebook"></i> Child 2</a>
+                        </li>
+                        <li>
+                            </i>
+                            <a href="#">
+                                <i class="uk-icon-facebook"></i> Child 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-twitter"></i> Item</a>
+                </li>
+                <li class="uk-nav-divider"></li>
+                <li>
+                    <a href="#">
+                        <i class="uk-icon-rss"></i> Item</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Navbar component
+            <code>uk-navbar | uk-navbar-nav | uk-active | uk-parent</code>
+        </h3>
+        <ul>
+            <li>"uk-navbar" to a "nav" tag</li>
+            <li>"uk-navbar-nav" to "uk" tag, use "a" tag as menu lists</li>
+            <li>"uk-active" to a list item to apply an active state</li>
+            <li>"uk-parent" to indicate a parent menu item</li>
+        </ul>
+        <nav class="uk-navbar">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <a href="">Active</a>
+                </li>
+                <li>
+                    <a href="">Item</a>
+                </li>
+                <li class="uk-parent" data-uk-dropdown aria-haspopup="true" aria-expanded="false">
+                    <a href="">Parent</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom" aria-hidden="true" style="top: 40px; left: 0px;" tabindex="">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Another item</a>
+                            </li>
+                            <li class="uk-nav-header">Header</li>
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Another item</a>
+                            </li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="#">Separated item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Navbar flip
+            <code>uk-navbar-flip</code>
+        </h3>
+        <ul>
+            <li>"uk-navbar-flip" align navigations and items to the right</li>
+        </ul>
+        <nav class="uk-navbar">
+            <div class="uk-navbar-flip">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent" data-uk-dropdown="">
+                        <a href="">Parent</a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+                                <li>
+                                    <a href="#">Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another item</a>
+                                </li>
+                                <li class="uk-nav-header">Header</li>
+                                <li>
+                                    <a href="#">Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another item</a>
+                                </li>
+                                <li class="uk-nav-divider"></li>
+                                <li>
+                                    <a href="#">Separated item</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Item</a>
+                    </li>
+                    <li class="uk-active">
+                        <a href="">Active</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Subnav | Subnav line | Subnav pill
+            <code>uk-subnav | ik-subnav-line | uk-subnav-pill</code>
+        </h3>
+        <ul>
+            <li>"uk-subnav" Add this class to an "ul" tag and nest "a" tag within the list.</li>
+            <li>"uk-subnav-line" Add this class to the exixting "ul" tag to separate menu items with lines.</li>
+            <li>"uk-subnav-pill" Add this class to the exixting "ul" tag to highlight the active menu with a background.</li>
+        </ul>
+        <h1>uk-subnav</h1>
+        <ul class="uk-subnav">
+            <li>
+                <a href="#">Item 1</a>
+            </li>
+            <li>
+                <a href="#">Item 2</a>
+            </li>
+            <li>
+                <a href="#">Item 3</a>
+            </li>
+        </ul>
+        <h1>uk-subnav-line</h1>
+        <ul class="uk-subnav uk-subnav-line">
+            <li>
+                <a href="#">Item 1</a>
+            </li>
+            <li>
+                <a href="#">Item 2</a>
+            </li>
+            <li>
+                <a href="#">Item 3</a>
+            </li>
+        </ul>
+        <h1>uk-subnav-pill</h1>
+        <ul class="uk-subnav uk-subnav-pill">
+            <li>
+                <a href="#">Item 1</a>
+            </li>
+            <li>
+                <a href="#">Item 2</a>
+            </li>
+            <li>
+                <a href="#">Item 3</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Breadcrumb
+            <code>uk-breadcrumb</code>
+        </h3>
+        <ul>
+            <li>"uk-breadcrumb" Add this class to an "ul" for breadcrumb.</li>
+        </ul>
+        <ul class="uk-breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <span>Category</span>
+            </li>
+            <li class="uk-active">
+                <span>Post</span>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Pagination | Pagination right
+            <code>uk-breadcrumb | uk-pagination-right</code>
+        </h3>
+        <ul>
+            <li>"uk-pagination" Add this class to define the Pagination component. Use "a" elements as pagination items within
+                the list.</li>
+            <li>"uk-pagination-right" Add this class to the exixting "ul" tag to align it right</li>
+        </ul>
+        <ul class="uk-pagination uk-pagination-right">
+            <li class="uk-disabled">
+                <span>
+                    <i class="uk-icon-angle-double-left"></i>
+                </span>
+            </li>
+            <li class="uk-active">
+                <span>1</span>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <span>...</span>
+            </li>
+            <li>
+                <a href="#">20</a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="uk-icon-angle-double-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Tab | Horizontal modifiers | Vertical modifiers
+            <code>uk-tab | data-uk-tab</code>
+        </h3>
+        <ul>
+            <li>"uk-tab" Add this class to the exixting "ul" tag. Use "a" elements as tab items within the list.</li>
+            <li>"uk-tab-flip" Add this class to align tabs right and in reversed order.</li>
+            <li>"uk-tab-bottom" Add this class to place tabs at the bottom.</li>
+        </ul>
+        <h1>Normal</h1>
+        <ul class="uk-tab uk-width-medium-7-10" data-uk-tab>
+            <li class="uk-active">
+                <a href="#">Active</a>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+            <li class="uk-disabled">
+                <a href="#">Disabled</a>
+            </li>
+            <li class="uk-tab-responsive uk-active uk-hidden" aria-haspopup="true" aria-expanded="false">
+                <a>Active</a>
+                <div class="uk-dropdown uk-dropdown-small" aria-hidden="true">
+                    <ul class="uk-nav uk-nav-dropdown"></ul>
+                    <div></div>
+                </div>
+            </li>
+        </ul>
+        <h1>Flip</h1>
+        <ul class="uk-tab uk-tab-flip uk-width-medium-7-10" data-uk-tab>
+            <li class="uk-active">
+                <a href="#">Active</a>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+            <li class="uk-disabled">
+                <a href="#">Disabled</a>
+            </li>
+            <li class="uk-tab-responsive uk-active uk-hidden" aria-haspopup="true" aria-expanded="false">
+                <a>Active</a>
+                <div class="uk-dropdown uk-dropdown-small" aria-hidden="true">
+                    <ul class="uk-nav uk-nav-dropdown"></ul>
+                    <div></div>
+                </div>
+            </li>
+        </ul>
+        <h1>Bottom</h1>
+        <ul class="uk-tab uk-tab-bottom uk-width-medium-7-10" data-uk-tab>
+            <li class="uk-active">
+                <a href="#">Active</a>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+            <li class="uk-disabled">
+                <a href="#">Disabled</a>
+            </li>
+            <li class="uk-tab-responsive uk-active uk-hidden" aria-haspopup="true" aria-expanded="false">
+                <a>Active</a>
+                <div class="uk-dropdown uk-dropdown-small" aria-hidden="true">
+                    <ul class="uk-nav uk-nav-dropdown"></ul>
+                    <div></div>
+                </div>
+            </li>
+        </ul>
+        <h1>Vertical modifiers</h1>
+        <div class="uk-grid" data-uk-grid-margin="">
+            <div class="uk-width-medium-1-2 uk-row-first">
+                <ul class="uk-tab uk-tab-left uk-width-medium-1-2" data-uk-tab="">
+                    <li class="uk-active">
+                        <a href="#">Active</a>
+                    </li>
+                    <li>
+                        <a href="#">Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Item</a>
+                    </li>
+                    <li class="uk-tab-responsive uk-active uk-hidden" aria-haspopup="true" aria-expanded="false">
+                        <a>Active</a>
+                        <div class="uk-dropdown uk-dropdown-small" aria-hidden="true">
+                            <ul class="uk-nav uk-nav-dropdown"></ul>
+                            <div></div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="uk-width-medium-1-2">
+                <ul class="uk-tab uk-tab-right uk-width-medium-1-2" data-uk-tab="">
+                    <li class="uk-active">
+                        <a href="#">Active</a>
+                    </li>
+                    <li>
+                        <a href="#">Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Item</a>
+                    </li>
+                    <li class="uk-tab-responsive uk-active uk-hidden" aria-haspopup="true" aria-expanded="false">
+                        <a>Active</a>
+                        <div class="uk-dropdown uk-dropdown-small" aria-hidden="true">
+                            <ul class="uk-nav uk-nav-dropdown"></ul>
+                            <div></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Thumbnav
+            <code>uk-thumbnav</code>
+        </h3>
+        <ul>
+            <li>"uk-thumbnav" Add this class to create a flexible thumbnail navigation</li>
+        </ul>
+        <ul class="uk-thumbnav">
+            <li class="uk-active">
+                <a href="#">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_200x100.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_200x100.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_200x100.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_200x100.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_200x100.svg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>List | List line | List striped
+            <code>uk-list | uk-list-line | uk-list-striped</code>
+        </h3>
+        <ul>
+            <li>"uk-list" Add this class to create nicely looking lists</li>
+        </ul>
+        <h1>List</h1>
+        <ul class="uk-list">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+        <h1>List line</h1>
+        <ul class="uk-list uk-list-line">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+        <h1>List striped</h1>
+        <ul class="uk-list uk-list-striped">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-large-top">
+        <h3>Description list | Description list line
+            <code>uk-description-list-horizontal | uk-description-list-line</code>
+        </h3>
+        <ul>
+            <li>"uk-description-list-horizontal" Add this class to create nicely looking description lists.</li>
+            <li>"uk-description-list-line" Add this class to separate the description list items with lines.</li>
+        </ul>
+        <h1>Description list horizontal</h1>
+        <dl class="uk-description-list-horizontal">
+            <dt>Description lists</dt>
+            <dd>A description list defines terms and their corresponding descriptions.</dd>
+            <dt>Lorem ipsum</dt>
+            <dd>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+            <dt>A long term is truncated</dt>
+            <dd>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</dd>
+        </dl>
+        <h1>Description list line</h1>
+        <dl class="uk-description-list-line">
+            <dt>Description lists</dt>
+            <dd>A description list defines terms and their corresponding descriptions.</dd>
+            <dt>Lorem ipsum</dt>
+            <dd>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+            <dt>Ut enim</dt>
+            <dd>Ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+        </dl>
+    </div>
+    <script src="js/uikit.min.js"></script>
+    <script type="text/javascript" src="js/components/accordion.min.js"></script>
+</body>
+
+</html>

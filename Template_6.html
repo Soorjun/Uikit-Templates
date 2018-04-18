@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Template 6</title>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/components/autocomplete.css" />
+    <link rel="stylesheet" href="css/components/slidenav.css" />
+    <link rel="stylesheet" href="css/components/datepicker.css" />
+    <link rel="stylesheet" href="css/components/form-select.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/components/lightbox.js"></script>
+    <script src="js/components/autocomplete.js"></script>
+    <script src="js/components/datepicker.js"></script>
+    <script src="js/components/timepicker.js"></script>
+    <script src="js/components/form-select.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+</head>
+
+<body>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Lightbox -
+            <code>data-uk-lightbox</code>
+        </h3>
+        <ul>
+            <li>data-uk-lightbox - Create a fancy lightbox for images and videos utilizing the Modal component.</li>
+        </ul>
+        <a class="uk-button" href="https://getuikit.com/v2/docs/images/placeholder_800x400_1.jpg" data-uk-lightbox="" title="Title">Open lightbox</a>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Groups -
+            <code>data-uk-lightbox</code>
+        </h3>
+        <ul>
+            <li>{group:'my-group'} - You can link multiple images to the same lightbox and switch between them from within the
+                lightbox.</li>
+        </ul>
+        <div class="uk-grid uk-grid-width-medium-1-4" data-uk-grid-margin="">
+            <div class="uk-row-first">
+                <a href="https://getuikit.com/v2/docs/images/placeholder_800x600_1.jpg" data-uk-lightbox="{group:'group1'}" title="Title">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_800x600_1.jpg" width="800" height="600" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://getuikit.com/v2/docs/images/placeholder_800x600_2.jpg" data-lightbox-type="image" data-uk-lightbox="{group:'group1'}"
+                    title="Title">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_800x600_2.jpg" width="800" height="600" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://getuikit.com/v2/docs/images/placeholder_800x600_3.jpg" data-lightbox-type="image" data-uk-lightbox="{group:'group1'}"
+                    title="Title">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_800x600_3.jpg" width="800" height="600" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://getuikit.com/v2/docs/images/placeholder_800x600_4.jpg" data-lightbox-type="image" data-uk-lightbox="{group:'group1'}"
+                    title="Title">
+                    <img src="https://getuikit.com/v2/docs/images/placeholder_800x600_4.jpg" width="800" height="600" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Different content sources
+            <code></code>
+        </h3>
+        <ul>
+            <li></li>
+        </ul>
+        <p>
+            <a class="uk-button" href="https://getuikit.com/v2/docs/images/placeholder_800x600_1.jpg" data-uk-lightbox="{group:'group2'}"
+                title="Title">Image</a>
+            <a class="uk-button" href="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" data-uk-lightbox="{group:'group2'}">MP4</a>
+            <a class="uk-button" href="http://vimeo.com/1084537" data-uk-lightbox="{group:'group2'}">Vimeo</a>
+            <a class="uk-button" href="https://www.youtube.com/watch?v=YE7VzlLtp-4" data-uk-lightbox="{group:'group2'}">YouTube</a>
+            <a class="uk-button" href="https://getuikit.com/docs/lightbox.html" data-uk-lightbox="{group:'group2'}">Iframe</a>
+        </p>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Autocomplete
+            <code>uk-autocomplete</code>
+        </h3>
+        <ul>
+            <li>uk-autocomplete - Create inputs that allow users to choose from a list of pre-generated values while typing.</li>
+        </ul>
+        <div class="uk-autocomplete uk-form" data-uk-autocomplete="{source:'http://www.json-generator.com/api/json/get/cjFYaaocgO?indent=2'}">
+            <input type="text" autocomplete="off">
+            <div class="uk-dropdown" aria-expanded="false">
+                <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                    <li data-value="Hamburg">
+                        <a>Hamburg</a>
+                    </li>
+                    <li data-value="New York">
+                        <a>New York</a>
+                    </li>
+                    <li data-value="Moscow">
+                        <a>Moscow</a>
+                    </li>
+                    <li data-value="Amsterdam">
+                        <a>Amsterdam</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Datepicker 
+            <code>data-uk-datepicker</code>
+        </h3>
+        <h4>CSS to add</h4>
+        <ul>
+            <li>css/uikit.css</li>
+            <li>css/components/datepicker.css</li>
+            <li>css/components/form-select.css
+            </li>
+        </ul>
+        <h4>JS to add</h4>
+        <ul>
+            <li>js/uikit.min.js</li>
+            <li>js/components/datepicker.min.js</li>
+            <li>js/components/form-select.min.js</li>
+        </ul>
+        <form class="uk-form">
+            <input type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+        </form>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Slider 
+            <code>uk-slider</code>
+        </h3>
+        <ul>
+            <li>uk-slider - Create a list of items to use as a responsive carousel slider</li>
+            <li>add the data-uk-slider attribute to a container element around a .uk-slider-container element</li>
+        </ul>        
+        <div data-uk-slider>
+            <div class="uk-slider-container">
+                <ul class="uk-slider uk-grid-width-medium-1-4">
+                    <li>...</li>
+                    ...
+                </ul>
+            </div>        
+        </div>
+    </div>
+</body>
+
+</html>
