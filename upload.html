@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/components/placeholder.css" />
+    <link rel="stylesheet" href="css/components/form-file.css" />
+    <link rel="stylesheet" href="css/components/progress.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/components/upload.js"></script>
+</head>
+
+<body>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Upload
+            <code></code>
+        </h3>
+        <ul>
+            <p>The Upload component always needs to be implemented individually according to your requirements. In our example
+                case we used the Placeholder and the Form file component, applying both the drop and select requests. Additionally
+                we used the Progress component to illustrate the uploading progress.</p>
+        </ul>
+        <div id="upload-drop" class="uk-placeholder uk-text-center">
+            <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i> Attach binaries by dropping them here or
+            <a class="uk-form-file">selecting one
+                <input id="upload-select" type="file">
+            </a>.
+        </div>
+        <div id="progressbar" class="uk-progress uk-hidden">
+            <div class="uk-progress-bar" style="width: 0%;">0%</div>
+        </div>
+        <script>
+            $(function () {
+
+                var progressbar = $("#progressbar"),
+                    bar = progressbar.find('.uk-progress-bar'),
+                    settings = {
+
+                        method: 'PUT', // HTTP method, default is 'POST'
+
+                        action: '/', // upload url
+
+                        allow: '*.(jpg|gif|png|pdf)', // allow only images
+
+                        headers: {
+                            'Access-Control-Allow-Origin': '*'
+                        },
+
+                        loadstart: function () {
+                            bar.css("width", "0%").text("0%");
+                            progressbar.removeClass("uk-hidden");
+                        },
+
+                        progress: function (percent) {
+                            percent = Math.ceil(percent);
+                            bar.css("width", percent + "%").text(percent + "%");
+                        },
+
+                        allcomplete: function (response) {
+
+                            bar.css("width", "100%").text("100%");
+
+                            setTimeout(function () {
+                                progressbar.addClass("uk-hidden");
+                            }, 250);
+
+                            alert("Upload Completed")
+                        }
+                    };
+
+                var select = UIkit.uploadSelect($("#upload-select"), settings),
+                    drop = UIkit.uploadDrop($("#upload-drop"), settings);
+            });
+        </script>
+    </div>
+</body>
+
+</html>

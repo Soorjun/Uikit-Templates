@@ -4,22 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Template 8</title>
-    <link rel="stylesheet" href="css/uikit.css" />
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="css/components/accordion.css" />
-    <link rel="stylesheet" href="css/components/notify.css" />
-    <link rel="stylesheet" href="css/components/search.css" />
+    <link rel="stylesheet" href="/css/uikit.css" />
+    <link rel="stylesheet" href="/css/uikit.min.css" />
+    <link rel="stylesheet" href="/css/components/accordion.css" />
+    <link rel="stylesheet" href="/css/components/notify.css" />
+    <link rel="stylesheet" href="/css/components/search.css" />
+    <link rel="stylesheet" href="/css/components/nestable.css" />
+    <link rel="stylesheet" href="/css/components/sortable.css" />
+    <link rel="stylesheet" href="/css/components/sticky.css" />
+    <link rel="stylesheet" href="/css/components/autocomplete.css" />
+    <link rel="stylesheet" href="/css/components/tooltip.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/uikit.js"></script>
-    <script src="js/components/parallax.js"></script>
-    <script src="js/components/accordion.js"></script>
-    <script src="js/components/notify.js"></script>
-    <script src="js/components/search.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/uikit.js"></script>
+    <script src="/js/components/parallax.js"></script>
+    <script src="/js/components/accordion.js"></script>
+    <script src="/js/components/notify.js"></script>
+    <script src="/js/components/search.js"></script>
+    <script src="/js/components/nestable.js"></script>
+    <script src="/js/components/sortable.js"></script>
+    <script src="/js/components/sticky.js"></script>
+    <script src="/js/components/timepicker.js"></script>
+    <script src="/js/components/autocomplete.js"></script>
+    <script src="/js/components/tooltip.js"></script>
 
 </head>
 
 <body>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Sticky
+            <code>data-uk-sticky</code>
+        </h3>
+        <ul>
+            <li>data-uk-sticky - Make elements remain at the top of the viewport, like a sticky navbar.</li>
+        </ul>
+        <div class="uk-sticky-placeholder" style="height: 52px; margin: 0px;">
+            <div class="uk-panel uk-panel-box" data-uk-sticky="{boundary:'#define-an-offset'}" style="margin: 0px;">
+                Stick to the top</div>
+        </div>
+    </div>
+    <hr>
     <div class="uk-container uk-container-center uk-margin-top">
         <h3>Parallax
             <code>data-uk-parallax</code>
@@ -234,6 +258,102 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Nestable
+            <code>uk-nestable | uk-nestable-item | uk-nestable-panel</code>
+        </h3>
+        <ul>
+            <li>uk-nestable - Add this class to a "ul" element to define the component that can be sorted by drag and drop.</li>
+            <li>uk-nestable-item - Add this class to each "li" element the list item.</li>
+            <li>uk-nestable-panel - Add this class to a "div" element inside the "li" element to style the item.</li>
+        </ul>
+        <ul class="uk-nestable" data-uk-nestable="">
+            <li class="uk-nestable-item">
+                <div class="uk-nestable-panel">
+                    Item 1
+                </div>
+            </li>
+            <li class="uk-nestable-item">
+                <div class="uk-nestable-panel">
+                    Item 2
+                </div>
+            </li>
+            <li class="uk-nestable-item">
+                <div class="uk-nestable-panel">
+                    Item 3
+                </div>
+            </li>
+            <li class="uk-nestable-item">
+                <div class="uk-nestable-panel">
+                    Item 4
+                </div>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Sortable
+            <code>uk-sortable | data-uk-sortable</code>
+        </h3>
+        <ul>
+            <li>uk-sortable - Create sortable grids and lists to rearrange the order of its elements.</li>
+        </ul>
+        <ul class="uk-sortable uk-grid uk-grid-small uk-grid-width-1-5" data-uk-sortable="">
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 3</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 1</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 4</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 5</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 2</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 10</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 6</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 7</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 8</div>
+            </li>
+            <li class="uk-grid-margin">
+                <div class="uk-panel uk-panel-box">Item 9</div>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Timepicker
+            <code>data-uk-timepicker</code>
+        </h3>
+        <ul>
+            <li>Create a timepicker which can easily be used by selecting a time value from a pre filled dropdown.</li>
+        </ul>
+        <form class="uk-form">
+            <input type="text" data-uk-timepicker>
+        </form>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Tooltip
+            <code>data-uk-tooltip</code>
+        </h3>
+        <ul>
+            <li>data-uk-tooltip - Easily create a nicely looking tooltip.</li>
+        </ul>
+        <button class="uk-button" data-uk-tooltip={pos:""} title="test">Tooltip</button>
+    </div>    
 </body>
 <script>
     // jQuery(function($){  
