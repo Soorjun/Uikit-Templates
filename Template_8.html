@@ -6,10 +6,17 @@
     <title>Template 8</title>
     <link rel="stylesheet" href="css/uikit.css" />
     <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/components/accordion.css" />
+    <link rel="stylesheet" href="css/components/notify.css" />
+    <link rel="stylesheet" href="css/components/search.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/uikit.js"></script>
     <script src="js/components/parallax.js"></script>
+    <script src="js/components/accordion.js"></script>
+    <script src="js/components/notify.js"></script>
+    <script src="js/components/search.js"></script>
+
 </head>
 
 <body>
@@ -29,6 +36,221 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Parallax - Nested animation
+            <code>data-uk-parallax</code>
+        </h3>
+        <ul>
+            <li>data-uk-parallax - Using different animations for nested elements is a simple task.</li>
+        </ul>
+        <div class="uk-margin uk-text-contrast uk-text-center uk-flex uk-flex-center uk-flex-middle" data-uk-parallax="{bg: -200}"
+            style="height: 350px; background-image: url(&quot;http://getuikit.com/v2/docs/images/placeholder_800x400_2.jpg&quot;); background-size: 1223px 612px; background-repeat: no-repeat; background-position: 50% -79.04px;">
+            <div class="uk-width-medium-1-2" data-uk-parallax="{opacity: '0,1', scale: '0,1'}" style="transform: scale(0.3552); opacity: 0.3552;">
+                <h1 class="uk-text-contrast">Heading</h1>
+                <p class="uk-text-large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Parallax - Target Option
+            <code>data-uk-parallax</code>
+        </h3>
+        <ul>
+            <li>use the target option</li>
+        </ul>
+        <div class="uk-margin uk-text-contrast uk-text-center uk-flex uk-flex-center uk-flex-middle" data-uk-parallax="{bg: -200}"
+            style="height: 350px; background-image: url(&quot;http://getuikit.com/v2/docs/images/placeholder_800x400_2.jpg&quot;); background-size: 1223px 612px; background-repeat: no-repeat; background-position: 50% -54.21px;">
+            <div class="uk-width-medium-1-2" data-uk-parallax="{opacity: '0,1', scale: '0,1', target: '#target-option'}" style="transform: scale(0.5478); opacity: 0.5478;">
+                <h1 class="uk-text-contrast">Heading</h1>
+                <p class="uk-text-large">This text is animated as long as the headline "Target Option" is in the viewport.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Parallax - Velocity
+            <code>data-uk-parallax</code>
+        </h3>
+        <ul>
+            <li>To adjust the easing of the animation, add the velocity option.</li>
+        </ul>
+        <div id="test-velocity" class="uk-margin uk-text-contrast uk-text-center uk-flex uk-flex-center uk-flex-middle" style="height: 350px; background-image: url('http://getuikit.com/v2/docs/images/placeholder_800x400_3.jpg'); background-size: cover;">
+            <div class="uk-grid uk-flex-center uk-flex-middle">
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '0.04', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 65.1852px, 0px);">0.04</div>
+                </div>
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '0.2', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 59.2593px, 0px);">0.2</div>
+                </div>
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '0.6', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 44.4444px, 0px);">0.6</div>
+                </div>
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '1', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 29.6296px, 0px);">1</div>
+                </div>
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '2', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 0px, 0px);">2</div>
+                </div>
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '3', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 0px, 0px);">3</div>
+                </div>
+                <div>
+                    <div class="uk-panel uk-panel-box" data-uk-parallax="{target:'#test-velocity', y: '150', velocity: '4', viewport: '0.9'}"
+                        style="transform: translate3d(0px, 0px, 0px);">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Parallax - Viewport
+            <code>data-uk-parallax</code>
+        </h3>
+        <ul>
+            <li>The animation duration can be adjusted with the value 1 or false the animation lasts as long as the element is
+                in the viewport.</li>
+        </ul>
+        <div class="uk-margin uk-text-contrast uk-text-center uk-flex uk-flex-center uk-flex-middle" data-uk-parallax="{bg: -200}"
+            style="height: 350px; background-image: url(&quot;http://getuikit.com/v2/docs/images/placeholder_800x400_1.jpg&quot;); background-size: 1223px 612px; background-repeat: no-repeat; background-position: 50% -89.49px;">
+            <div class="uk-width-medium-1-2" data-uk-parallax="{opacity: '0,1', scale: '0,1', viewport: '0.5'}" style="transform: scale(1); opacity: 1;">
+                <h1 class="uk-text-contrast">Heading</h1>
+                <p class="uk-text-large">This text is animated until it reaches the middle of the viewport.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Accordion
+            <code>uk-accordion | data-uk-accordion</code>
+        </h3>
+        <ul>
+            <li>uk-accordion - Create a list of items, allowing each item's content to be expanded and collapsed by clicking
+                its header.</li>
+            <li>uk-accordion-content - Add the "uk-accordion-content" class to each of the content sections within the container.</li>
+            <li>uk-accordion-title - Add the "uk-accordion-title" class to any element, like a heading, above the content section
+                to create a toggle.</li>
+        </ul>
+        <div class="uk-accordion" data-uk-accordion="">
+            <h3 class="uk-accordion-title">Heading 1</h3>
+            <div data-wrapper="true" style="height: 0px; position: relative; overflow: hidden;" aria-expanded="false">
+                <div class="uk-accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+            <h3 class="uk-accordion-title">Heading 2</h3>
+            <div data-wrapper="true" style="overflow:hidden;height:0;position:relative;" aria-expanded="false">
+                <div class="uk-accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+            <h3 class="uk-accordion-title">Heading 3</h3>
+            <div data-wrapper="true" style="overflow:hidden;height:0;position:relative;" aria-expanded="false">
+                <div class="uk-accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Notify
+            <code></code>
+        </h3>
+        <ul>
+            <li>Create toggleable notifications that fade out automatically.</li>
+        </ul>
+        <p>
+            <button class="uk-button btn" data-message="message with default background with timeout 1000s !" data-timeout="1000" data-status="default"
+                data-pos="top-center">Default</button>
+            <button class="uk-button uk-button-primary btn" data-message="<i class='uk-icon-check'></i> message with primary background together with icon!"
+                data-timeout="1000" data-status="primary" data-pos="top-center">Primary</button>
+            <button class="uk-button uk-button-danger btn" data-message="<i class='uk-icon-check'></i> message with danger background and bottom bottom-center!"
+                data-timeout="1000" data-status="danger" data-pos="bottom-center">Danger</button>
+        </p>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Search
+            <code>uk-search | uk-search-field</code>
+        </h3>
+        <ul>
+            <li>uk-search - Add this class to a form element to define the Search component.</li>
+            <li>uk-search-field - Add this class to an "input" element to create the search field.</li>
+        </ul>
+        <form class="uk-search" data-uk-search="">
+            <input class="uk-search-field" type="search" placeholder="search..." autocomplete="off">
+        </form>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Search in navbars
+            <code>uk-search | uk-search-field</code>
+        </h3>
+        <ul>
+            <li>A search can be used inside a Navbar</li>
+        </ul>
+        <nav class="uk-navbar">
+            <div class="uk-navbar-flip">
+                <div class="uk-navbar-content">
+                    <form class="uk-search" data-uk-search="{flipDropdown:true, source:'../tests/components/_searchautocomplete.json'}">
+                        <input class="uk-search-field" type="search" placeholder="search...">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center uk-margin-top">
+        <h3>Search in off-canvas
+            <code>uk-search | uk-search-field</code>
+        </h3>
+        <ul>
+            <li>A search can also be placed inside the off-canvas bar.</li>
+        </ul>
+        <button class="uk-button" data-uk-offcanvas="{target:'#offcanvas-6'}">Open</button>
+        <div id="offcanvas-6" class="uk-offcanvas" aria-hidden="true">
+            <div class="uk-offcanvas-bar" mode="push">
+                <form class="uk-search">
+                    <input class="uk-search-field" type="search" placeholder="search...">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    // jQuery(function($){  
+    //     $("button").on("click", function(){  
+    //         $.UIkit.notify({
+    //             message : "<i class='uk-icon-check'></i> Message with an icon...",
+    //             status  : 'success',
+    //             timeout : 1000,
+    //             pos     : 'top-center',
+    //         }); 
+    //     });  
+    // })
+    jQuery(function ($) {
+        $(".btn").on("click", function () {
+            $.UIkit.notify($(this).data());
+        });
+    })
+</script>
 
 </html>
